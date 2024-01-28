@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!--& ###############  Font Awsome  ############# -->
+      <link rel="stylesheet" href="css/all.min.css" />
+
+      <!--& ###############  Bootstrap  ################ -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+      <!--& ###############  File Css  ################# -->
+      <link rel="stylesheet" href="css/style.css" />
+      <title>Yummy</title>
+
+      <!--& ############## Titlle Icon   ################ -->
+      <link rel="icon" type="image/jpeg" href="images/logo.png" />
+   </head>
+
+   <body>
+      <nav id="nav">
+         <div class="h-100 bg-black side">
+            <div class="links overflow-hidden">
+               <ul class="d-flex flex-column pt-4">
+                  <li id="sreach" class="py-2 position-relative">Search</li>
+                  <li id="categories" class="py-2 position-relative">
+                     Categories
+                  </li>
+                  <li id="area" class="py-2 position-relative">Area</li>
+                  <li id="ingred" class="py-2 position-relative">
+                     Ingredients
+                  </li>
+                  <li id="contact" class="py-2 position-relative">
+                     Contact Us
+                  </li>
+               </ul>
+            </div>
+            <div class="text-white p-4">
+               <div class="icons">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-solid fa-globe"></i>
+               </div>
+               <p>
+                  Copyright Â© <span id="year"></span> All Rights
+                  <br />Reserved.
+               </p>
+            </div>
+         </div>
+         <div class="nav-side py-4 px-2 flex-column justify-content-between">
+            <img src="images/logo.png" style="width: 50px" alt="logo" />
+            <i class="fa-solid open-close-icon fa-2x fa-align-justify menu"></i>
+            <i class="fa-solid fa-xmark fa-2x fa-align-justify close"></i>
+            <div>
+               <i class="fa-solid fa-globe d-block"></i>
+               <i class="fa-solid fa-share-nodes"></i>
+            </div>
+         </div>
+      </nav>
+
+      <section id="home" class="">
+         <div class="container">
+            <div id="homaData" class="row g-4 py-5"></div>
+         </div>
+      </section>
+
+      <section id="instructions" class="d-none">
+         <div class="container">
+            <div id="details" class="row py-5"></div>
+         </div>
+      </section>
+
+      <section id="ingred" class="d-none">
+         <div class="container">
+            <div class="row py-5 g-4">
+               <div class="col-md-3 text-white text-center">
+                  <div>
+                     <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                     <h3>Chicken</h3>
+                     <p>
+                        The chicken is a type of domesticated fowl, a subspecies
+                        of the red junglefowl (Gallus gallus). It is one of
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- *#### -->
+      <section
+         id="contactPage"
+         class="d-flex align-items-center justify-content-center vh-100 d-none"
+      >
+         <div class="container w-75">
+            <div class="row p-5 g-4">
+               <div class="col-6">
+                  <div id="myForm">
+                     <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Name"
+                        id="nameInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertName"
+                        role="alert"
+                     >
+                        Special characters and numbers not allowed
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div>
+                     <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Email"
+                        id="mailInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertMail"
+                        role="alert"
+                     >
+                        Email not valid *exemple@yyy.zzz
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div>
+                     <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Phone"
+                        id="phoneInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertPhone"
+                        role="alert"
+                     >
+                        Enter valid Phone Number
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div>
+                     <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Your Age"
+                        id="ageInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertAge"
+                        role="alert"
+                     >
+                        Enter valid age
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div>
+                     <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Enter Your Password"
+                        id="passInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertPass"
+                        role="alert"
+                     >
+                        Enter valid password *Minimum eight characters, at least
+                        one letter and one number:*
+                     </div>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div>
+                     <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Enter Your Repassword"
+                        id="rePassInput"
+                     />
+                     <div
+                        class="alert alert-danger d-none"
+                        id="alertRePass"
+                        role="alert"
+                     >
+                        Enter valid repassword
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="text-center">
+               <button
+                  class="btn btn-outline-danger disabled"
+                  id="submitButton"
+               >
+                  Submit
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <div class="loading d-none">
+         <span class="loader"></span>
+      </div>
+
+      <!--* ############## Java JQuery File ############### -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!--* ############## Java bundle File ############### -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!--* ############## Java Script File ############### -->
+      <script src="js/main.js" type="module"></script>
+   </body>
+</html>
