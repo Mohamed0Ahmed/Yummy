@@ -8,7 +8,9 @@ export class Contact {
    action() {
       document.getElementById("contact").addEventListener("click", () => {
          document.getElementById("home").classList.add("d-none");
+         document.getElementById("instructions").classList.add("d-none");
          document.getElementById("contactPage").classList.remove("d-none");
+
       });
    }
 }

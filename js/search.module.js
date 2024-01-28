@@ -34,8 +34,12 @@ export class Search {
    }
    showInputs(html) {
       document.getElementById("homaData").innerHTML = html;
-      document.querySelector(".loading").classList.add("d-none");
-
+      document.getElementById("instructions").classList.add("d-none");
+      document.getElementById("contactPage").classList.add("d-none");
+      document.getElementById("home").classList.remove("d-none");
+      // document.querySelector(".loading").classList.add("d-none");
+      $(".loading").fadeOut(300);
+      
 
       this.searchByName();
       this.searchByLetter();
@@ -47,7 +51,10 @@ export class Search {
          let api = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
          document.querySelector(".loading").classList.remove("d-none");
          let result = await this.api.getApi(api);
+         $(".loading").fadeIn(300);
+         
          this.showResult(this.html.homaData(result));
+         $(".loading").fadeOut(30);
       });
    }
    searchByLetter() {
@@ -56,7 +63,10 @@ export class Search {
          let searchValue = search.value;
          let api = `https://www.themealdb.com/api/json/v1/1/search.php?f=${searchValue}`;
          let result = await this.api.getApi(api);
+         $(".loading").fadeIn(300);
+         
          this.showResult(this.html.homaData(result));
+         $(".loading").fadeOut(300);
       });
    }
    showResult(html) {

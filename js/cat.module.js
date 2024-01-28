@@ -14,6 +14,10 @@ export class cat {
             document.querySelector(".loading").classList.remove("d-none");
             let data = await this.api.getApi(api);
             this.html.categorieBox(data);
+            $(".loading").fadeOut(300);
+            document.getElementById("instructions").classList.add("d-none");
+            document.getElementById("contactPage").classList.add("d-none");
+            document.getElementById("home").classList.remove("d-none");
          });
    }
    catData() {

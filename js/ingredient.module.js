@@ -12,8 +12,15 @@ export class Ingred {
          .addEventListener("click", async () => {
             let api = `https://www.themealdb.com/api/json/v1/1/list.php?i=list`;
             document.querySelector(".loading").classList.remove("d-none");
+            
             let data = await this.api.getApi(api);
             this.html.ingredHtml(data);
+            $(".loading").fadeOut(300);
+            document.getElementById("instructions").classList.add("d-none");
+            document.getElementById("contactPage").classList.add("d-none");
+            document.getElementById("home").classList.remove("d-none");
+
+            
          });
    }
    ingredData() {
