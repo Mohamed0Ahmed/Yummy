@@ -11,6 +11,7 @@ export class Area {
          let api = `https://www.themealdb.com/api/json/v1/1/list.php?a=list`;
          document.querySelector(".loading").classList.remove("d-none");
          let data = await this.api.getApi(api);
+         data= data.slice(0,20)
          this.html.areaBox(data);
 
          $(".loading").fadeOut(300);

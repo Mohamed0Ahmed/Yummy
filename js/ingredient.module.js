@@ -14,6 +14,8 @@ export class Ingred {
             document.querySelector(".loading").classList.remove("d-none");
             
             let data = await this.api.getApi(api);
+            // data= data.slice(0,20)
+
             this.html.ingredHtml(data);
             $(".loading").fadeOut(300);
             document.getElementById("instructions").classList.add("d-none");

@@ -13,6 +13,7 @@ export class cat {
             let api = `https://www.themealdb.com/api/json/v1/1/categories.php`;
             document.querySelector(".loading").classList.remove("d-none");
             let data = await this.api.getApi(api);
+            data = data.slice(0, 20);
             this.html.categorieBox(data);
             $(".loading").fadeOut(300);
             document.getElementById("instructions").classList.add("d-none");
