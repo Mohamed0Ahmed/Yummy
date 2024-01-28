@@ -32,6 +32,8 @@ export class cat {
    }
    async sendApi(api) {
       let data = await this.api.getApi(api);
+      data = data.slice(0, 20);
+
       let html = this.html.homaData(data);
       this.api.showData(html);
    }

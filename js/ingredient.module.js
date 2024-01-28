@@ -36,6 +36,7 @@ export class Ingred {
    }
    async sendApi(api) {
       let data = await this.api.getApi(api);
+      data = data.slice(0, 20);
       let showBox = this.html.homaData(data);
       this.api.showData(showBox);
    }

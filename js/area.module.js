@@ -31,6 +31,7 @@ export class Area {
    }
    async sendApi(api) {
       let data = await this.api.getApi(api);
+      data = data.slice(0, 20);
       let htmlContent = this.html.homaData(data);
       this.api.showData(htmlContent);
    }
